@@ -7,11 +7,25 @@ import {languageHelper} from '../../tool/language-helper';
 import {removeUrlSlashSuffix} from '../../tool/remove-url-slash-suffix';
 import {setToken} from '../../tool/set-token';
 
+import Title from './containers/title';
+import Content from './containers/content';
+import Footer from './containers/footer';
+import data from './data';
+
 export class Article extends React.Component {
   constructor(props) {
     super(props);
     // i18n
     this.text = Article.i18n[languageHelper()];
+    this.state={
+      backend:null
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      backend:data.content
+    });
   }
 
   render() {
@@ -27,7 +41,7 @@ export class Article extends React.Component {
       return (<Redirect to={pathname} />);
     }
     // render
-    return (
+    return (this.state.backend !== null) ? (
       <div>
         <div
           className="cell-wall"
@@ -36,8 +50,22 @@ export class Article extends React.Component {
             className="cell-membrane"
           >
             <span>article</span>
+            <Title 
+              username={this.state.backend.username} 
+            />
+            <Content 
+              content={this.state.backend.content} 
+              title={this.state.backend.title} 
+            />
+            <Footer 
+              tags={this.state.backend.tags} 
+            />
           </div>
         </div>
+      </div>
+    ) : (
+      <div>
+        loading
       </div>
     );
   }

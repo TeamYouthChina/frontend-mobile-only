@@ -1,0 +1,45 @@
+.titleWrapper {
+  display: -webkit-flex;
+  justify-content: flex-end;
+}
+.avatar {
+  width: 40px;
+  height:40px;
+  background: #F4F4F4;
+  margin-right:0.859vw;
+}
+.titleUl {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  margin-left: 10px;
+  flex-grow: 1;
+}
+.name {
+  list-style: none;
+  font-family: PingFang SC;
+  font-size: 14px;
+  line-height: normal;
+  color: #454F69;
+}
+.detail {
+  list-style: none;
+  font-family: PingFang SC;
+  line-height: normal;
+}
+.userDetail {
+  color: #8D9AAF;
+  font-size: 12px;
+}
+.count {
+  background: #F0F3FA;
+  border-radius: 8px;
+  padding:1px 7px;
+  color: #4F65E1;
+  font-size: 10px;
+  text-align: center;
+  border-width: 0;
+  margin-left: 10px;
+}
+.ellipsis {
+}

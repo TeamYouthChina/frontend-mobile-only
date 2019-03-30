@@ -7,6 +7,9 @@ import {languageHelper} from '../../tool/language-helper';
 import {removeUrlSlashSuffix} from '../../tool/remove-url-slash-suffix';
 import {setToken} from '../../tool/set-token';
 
+import {QuestionCard} from '../../general-component/question-card';
+import {ReviewCard} from '../../general-component/review-card';
+
 export class DiscoveryInsight extends React.Component {
   constructor(props) {
     super(props);
@@ -28,16 +31,11 @@ export class DiscoveryInsight extends React.Component {
     }
     // render
     return (
-      <div>
-        <div
-          className="cell-wall"
-        >
-          <div
-            className="cell-membrane"
-          >
-            <span>discovery-insight</span>
-          </div>
-        </div>
+      <div style={{backgroundColor: '#F0F3FA'}}>
+        <span>discovery-insight</span>
+        <QuestionCard />
+        <p style={{lineHeight:'10px'}}></p>
+        <ReviewCard />
       </div>
     );
   }

@@ -1,0 +1,29 @@
+.agree {
+  margin-left: 10px;
+  font-family: PingFang SC;
+  font-size: 10px;
+  line-height: normal;
+
+  color: #8D9AAF;
+}
+.comment {
+  font-family: PingFang SC;
+  font-size: 10px;
+  line-height: normal;
+
+  color: #8D9AAF;
+}
+.iconStyle {
+  float: right;
+  text-align: center;
+}
+.thumb {
+  
+}
+.like {
+  font-family: PingFang SC;
+  font-size: 10px;
+  line-height: normal;
+
+  color: #8D9AAF;
+}

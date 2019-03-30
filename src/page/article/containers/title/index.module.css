@@ -1,0 +1,23 @@
+.titleWrapper {
+  margin: 10px 0;
+}
+.avatar {
+  width: 24px;
+  height:24px
+}
+.username {
+  margin-left: 10px;
+  font-family: PingFang SC;
+  font-size: 12px;
+  line-height: normal;
+
+  color: #454F69;
+}
+.focus {
+  float: right;
+  font-family: PingFang SC;
+  font-size: 12px;
+  line-height: normal;
+
+  color: #4F65E1;
+}

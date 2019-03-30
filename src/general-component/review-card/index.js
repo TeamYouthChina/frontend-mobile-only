@@ -4,19 +4,56 @@ import {withRouter} from 'react-router-dom';
 
 import {languageHelper} from '../../tool/language-helper';
 
+import Title from './containers/title';
+import Content from './containers/content';
+import Footer from './containers/footer';
+import data from './data';
+
 class ReviewCardReact extends React.Component {
   constructor(props) {
     super(props);
     // i18n
     this.text = ReviewCardReact.i18n[languageHelper()];
+    this.state={
+      backend:'123'
+    };
+  }
+  
+  componentDidMount() {
+    this.setState({
+      backend:data.content
+    });
   }
 
   render() {
     // Use `this.props.history.push('/unauthorized');` to jump to unauthorized page
     // when fetch response is 401.
-    return (
+    const backend = this.state.backend;
+    return (this.state.backend !== null) ? (
+      <div
+        className="cell-wall"
+        style={{backgroundColor: '#FFFFFF'}}
+      >
+        <div
+          className="cell-membrane"
+        >
+          <Title 
+            count={backend.count} 
+            userDetail={backend.userDetail} 
+            username={backend.username}
+          />
+          <Content 
+            content={backend.content}
+          />
+          <Footer 
+            comment={backend.comment} 
+            agree={backend.agree}
+          />
+        </div>
+      </div>
+    ) : (
       <div>
-
+        loading
       </div>
     );
   }
