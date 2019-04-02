@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  margin-bottom: 10px;
+}
+.avatar {
+  width: 24px;
+  height: 24px;
+}
+.des {
+  margin-left: 10px;
+  font-family: PingFang SC;
+  font-size: 12px;
+  line-height: normal;
+
+  color: #454F69;
+}
+
+.focus {
+  font-family: PingFang SC;
+  font-size: 12px;
+  line-height: 26px;
+  text-align: right;
+  color: #4F65E1;
+}

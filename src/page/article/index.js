@@ -10,7 +10,10 @@ import {setToken} from '../../tool/set-token';
 import Title from './containers/title';
 import Content from './containers/content';
 import Footer from './containers/footer';
+import Comments from './components/comments';
+import {QuestionCard} from '../../general-component/question-card';
 import data from './data';
+import classes from './index.module.css';
 
 export class Article extends React.Component {
   constructor(props) {
@@ -42,9 +45,10 @@ export class Article extends React.Component {
     }
     // render
     return (this.state.backend !== null) ? (
-      <div>
+      <div style={{backgroundColor: '#F0F3FA'}}>
         <div
           className="cell-wall"
+          style={{backgroundColor: '#FFFFFF'}}
         >
           <div
             className="cell-membrane"
@@ -60,6 +64,27 @@ export class Article extends React.Component {
             <Footer 
               tags={this.state.backend.tags} 
             />
+            <Comments />
+          </div>
+        </div>
+        <div
+          className="cell-wall"
+        >
+          <div
+            className="cell-membrane"
+          >
+            <p className={classes.recommand}>推荐阅读</p>
+          </div>
+        </div>
+        
+        <div
+          className="cell-wall"
+          style={{backgroundColor: '#FFFFFF'}}
+        >
+          <div
+            className="cell-membrane"
+          >
+            <QuestionCard />
           </div>
         </div>
       </div>

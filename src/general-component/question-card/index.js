@@ -37,6 +37,7 @@ class QuestionCardReact extends React.Component {
         <div
           className="cell-membrane"
         >
+          
           <QuestionTitle title={this.state.backend.title} />
           <QuestionContent content={this.state.backend.content} />
           <Footer
@@ -60,7 +61,6 @@ QuestionCardReact.i18n = [
 
 QuestionCardReact.propTypes = {
   // self
-
   // React Router
   match: PropTypes.object.isRequired,
   history: PropTypes.object.isRequired,

@@ -1,0 +1,56 @@
+.desWrapper {
+  display: flex;
+}
+.topWrapper {
+  display: flex;
+}
+.avatar {
+  width: 24px;
+  height:24px;
+}
+.des {
+  font-family: PingFang SC;
+  font-size: 12px;
+  line-height: 24px;
+
+  color: #454F69;
+  margin-left: 10px;
+  text-align: center;
+}
+.title {
+  font-family: PingFang SC;
+  font-size: 16px;
+  line-height: normal;
+  color: #454F69;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.linkOut {
+  font-family: PingFang SC;
+  font-size: 12px;
+  line-height: normal;
+  text-align: center;
+
+  color: #4F65E1;
+  margin-bottom: 10px;
+}
+.questionDes {
+  font-family: PingFang SC;
+  font-size: 12px;
+  line-height: normal;
+
+  color: #454F69;
+}
+.focus {
+  font-family: PingFang SC;
+  font-size: 12px;
+  line-height: normal;
+  text-align: center;
+  color: #4F65E1;
+}
+.topWrapper2 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}

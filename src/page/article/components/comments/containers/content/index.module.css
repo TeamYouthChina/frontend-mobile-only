@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  margin-bottom: 10px;
+}
+.avatar {
+  width: 28px;
+  height:28px;
+  background: #F4F4F4;
+  margin-right: 10px;
+}
+.ulStyle {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
+.liStyle {
+  list-style: none;
+}
+.username {
+  font-family: PingFang SC;
+  font-size: 12px;
+  line-height: normal;
+
+  color: #8D9AAF;
+}
+.iconStyle {
+  float: right;
+  text-align: center;
+}
+.like {
+  font-family: PingFang SC;
+  font-size: 10px;
+  line-height: normal;
+  color: #8D9AAF;
+  margin-left: 2.5px;
+}
+.contentLi {
+  list-style: none;
+  margin-top: 7px;
+  font-family: PingFang SC;
+  font-size: 14px;
+  line-height: normal;
+  color: #454F69;
+}
+

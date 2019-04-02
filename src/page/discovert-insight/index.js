@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Redirect} from 'react-router-dom';
+import {Redirect, Link} from 'react-router-dom';
 
 import {isLogin} from '../../tool/api-helper';
 import {languageHelper} from '../../tool/language-helper';
@@ -33,9 +33,13 @@ export class DiscoveryInsight extends React.Component {
     return (
       <div style={{backgroundColor: '#F0F3FA'}}>
         <span>discovery-insight</span>
-        <QuestionCard />
+        <Link to={'/question/1'}>
+          <QuestionCard />
+        </Link>
         <p style={{lineHeight:'10px'}}></p>
-        <ReviewCard />
+        <Link to={'/article/1'}>
+          <ReviewCard />
+        </Link>
       </div>
     );
   }
