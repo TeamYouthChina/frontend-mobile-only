@@ -59,6 +59,11 @@
   margin-bottom: 49px;
   width: 100%;
 }
+.imgWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
 .inputStyle::placeholder {
   font-family: PingFang SC;
   font-size: 14px;
@@ -114,9 +119,45 @@
   height: 32px;
   margin: 0;
 }
+.deleteWrapper {
+  position: relative;
+}
 .deleteIcon {
   font-size: 16px;
   float: none;
   margin-left:5px;
   padding: 0;
+}
+.viewImg {
+  width:80px;
+  height:auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.maskRe {
+  position: relative;
+  width:80px!important;
+}
+.btmAb {
+  position:absolute;
+  right: 0;
+  bottom:0;
+}
+.picContainer {
+  background-color: #FFFFFF;
+  width: 80px;
+  position: relative;
+}
+.picIcon {
+  width:26px;
+  height:23.4px;
+  position:absolute;
+  z-index:0;
+  top:35%;
+  left: 35%;
+}
+.picInput {
+  width:80px;
+  height:75px;
+  opacity:0;
 }

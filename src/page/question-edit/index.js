@@ -14,8 +14,37 @@ export class QuestionEdit extends React.Component {
     super(props);
     // i18n
     this.text = QuestionEdit.i18n[languageHelper()];
+    this.state={
+      allTags:['公司福利','面试技巧','合理陶瓷']
+    };
+  }
+  
+  deleteIcon(index){
+    let array = this.state.allTags;
+    this.setState({
+      allTags:array.slice(0,index).concat(array.slice(index+1,array.length))
+    });
   }
 
+  newTag(e){
+    const value = e.target.value;
+    let array = this.state.allTags;
+    if(e.keyCode === 13) {
+      if(array.indexOf(value) === 1) {
+        alert('sorry for repeat');
+        e.target.value = null;
+        return;
+      } else if (value === null) {
+        alert('sorry for null');
+      }
+      array.push(value);
+      e.target.value = null;
+      this.setState({
+        allTags:array
+      });
+    }
+  }
+  
   render() {
     // get token from query string in URL
     setToken(this.props.location.search);
@@ -50,12 +79,13 @@ export class QuestionEdit extends React.Component {
               <textarea className={classes.textStyle} type="text" placeholder="为你的问题添加更详细的描述，让职场达人更好的帮助你哦"/>
             </li>
             <div className={classes.tags}>
-              <span className={classes.tagSpan}>公司福利</span>
-              <span className={classes.tagSpan}>面试技巧</span>
-              <span className={classes.tagSpan}>合理陶瓷</span>
-              <span className={classes.addTag}>
-                +新标签
-              </span>
+              {this.state.allTags.map((item,index)=>(
+                <span key={index} className={classes.tagSpan}>
+                  {item}
+                  <i onClick={() => this.deleteIcon(index)} className={`fa fa-times close ${classes.deleteIcon}`} />
+                </span>
+              ))}
+              <input className={classes.addTag} onKeyDown={(e) => this.newTag(e)} type="text" placeholder='+新标签' />
             </div>
           </ul>
         </div>
