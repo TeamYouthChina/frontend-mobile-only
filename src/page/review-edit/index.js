@@ -52,12 +52,18 @@ export class ReviewEdit extends React.Component {
   }
 
   handleInputChange(e) {
+    if(e.target.files.length > 1){
+      e.target.value = null;
+      e.target.files.unshift();
+    }
     // 利用自带方法制造url
     let imgSrcI = this.getObjectURL(e.target.files[0]);
     let urlLists = this.state.urlList;
-    this.setState(() => ({
-      urlLists: urlLists.push(imgSrcI)
-    }));
+    if(imgSrcI !== null){
+      this.setState(() => ({
+        urlLists: urlLists.push(imgSrcI)
+      }));
+    }
   }
 
   // 删除图片
@@ -70,6 +76,9 @@ export class ReviewEdit extends React.Component {
 
   // 转化上传文件到url
   getObjectURL(file) {
+    if(file === undefined) {
+      return null;
+    }
     let url = null;
     if (window.createObjectURL !== undefined) { // basic
       url = window.createObjectURL(file);
