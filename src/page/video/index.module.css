@@ -1,0 +1,20 @@
+.backFirst {
+  background-color:rgb(0,0,0);
+}
+.title {
+  color: #FFFFFF;
+  margin: 0 5vw;
+  display: flex; 
+}
+.fileDes {
+  flex-grow: 1;
+  text-align: center;
+}
+.active {
+  margin-top: 20px;
+  opacity: 1;
+}
+.noActive {
+  opacity: 0.6;
+  margin-top: 20px;
+}

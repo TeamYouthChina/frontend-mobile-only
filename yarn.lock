@@ -1397,13 +1397,13 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
-aphrodite@2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/aphrodite/-/aphrodite-2.2.3.tgz#ebba43ba08473d146cb039ed0a2a4530bc83b812"
-  integrity sha512-e09soRmp1MGzGibAzSOBMnIqq7zF9DwYM2d4jurnf9CKDGnJqQizGkUtwCIyodZv9tj2eIyGskeKA7RhUbXQrA==
+aphrodite@2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/aphrodite/-/aphrodite-2.3.1.tgz#376b9964c8742218fd10b8b82786f9d22e650e41"
+  integrity sha512-hwRxpYarrHLRti62RlWplK3A1bDkh4dw5jjDh4Xvra6z45B5yx9Rqsiaw3duELCI/FLOYxlxVe1bysRpIw5X1Q==
   dependencies:
     asap "^2.0.3"
-    inline-style-prefixer "^4.0.2"
+    inline-style-prefixer "^5.0.4"
     string-hash "^1.1.3"
 
 append-transform@^0.4.0:
@@ -4565,10 +4565,10 @@ griffith-message@^1.2.1:
   resolved "https://registry.yarnpkg.com/griffith-message/-/griffith-message-1.2.1.tgz#f890706bf089dc996653657384c5596fd118fd8a"
   integrity sha512-g3nccVs4Iq0pbi4HZcILEQpTPqst+Gk/d4wQXknFlzYtSF/0iVEkwY/gdfoVhbAQRh7Ld2FO9Np4XDav7hhQRg==
 
-griffith-mp4@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/griffith-mp4/-/griffith-mp4-1.2.1.tgz#b704350c4a755a75fdc5b167c569a278034b4321"
-  integrity sha512-ucVMhZP1fkEIEJ1yn80brChlKpqgRmgXJ55c+ouInIvhapLtVLU2gyl9ZD4mGBqGzjr9Phu+IL4eKJlF3NfC8Q==
+griffith-mp4@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/griffith-mp4/-/griffith-mp4-1.3.1.tgz#6c213ec4bf26088a95af73ccd7e55acd042489ed"
+  integrity sha512-1WDnKdph4ulcLgdLiCIc1roLwuwvfiZ9sskLBDuMrK20Bk3LRos8pbrjiea5LUMdobbgiceFcdQygfZFliEgCw==
   dependencies:
     lodash "^4.17.11"
 
@@ -4577,22 +4577,22 @@ griffith-utils@^1.2.1:
   resolved "https://registry.yarnpkg.com/griffith-utils/-/griffith-utils-1.2.1.tgz#21331bdd0571f262449a2211feafaef982dec4f8"
   integrity sha512-D93Jtsuq+4+p7YmCuoH9aCQoGM/vNZ/d8pqHhA+NEjX5YFhp33MQF0gPsXaoN1yWaqrUOjnwY8239abulwYiOA==
 
-griffith@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/griffith/-/griffith-1.2.1.tgz#e9e083c9f04f594c2b5a8a95530722dd6a014004"
-  integrity sha512-qA/UhLbtgRW1fyxF20wK8T9ibWtfsvv2O++XqBY2ahSVu/d8jPpi1L9+ME3rJkhRuohooZ1BZKbR6iKRCJCUUw==
+griffith@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/griffith/-/griffith-1.3.1.tgz#492a8e02f1292acd771faac11f55bec4a1bb0b28"
+  integrity sha512-l0Vebajup1aCefjfKfK+7e4VEHwtNK3/OF6pizXd0SFLY/HIji38JcFHe7cGQ4E64bdgXevw5v1FKB1UYXQSug==
   dependencies:
-    aphrodite "2.2.3"
+    aphrodite "2.3.1"
     element-resize-event "^3.0.3"
     eventemitter3 "^3.1.0"
     griffith-hls "^1.2.1"
     griffith-message "^1.2.1"
-    griffith-mp4 "^1.2.1"
+    griffith-mp4 "^1.3.1"
     griffith-utils "^1.2.1"
     isomorphic-bigscreen "2.0.5"
     lodash "4.17.11"
-    prop-types "^15.6.2"
-    query-string "^6.3.0"
+    prop-types "^15.7.2"
+    query-string "^6.4.2"
 
 growly@^1.3.0:
   version "1.3.0"
@@ -5131,12 +5131,11 @@ inline-style-prefixer@^3.0.6:
     bowser "^1.7.3"
     css-in-js-utils "^2.0.0"
 
-inline-style-prefixer@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/inline-style-prefixer/-/inline-style-prefixer-4.0.2.tgz#d390957d26f281255fe101da863158ac6eb60911"
-  integrity sha512-N8nVhwfYga9MiV9jWlwfdj1UDIaZlBFu4cJSJkIr7tZX7sHpHhGR5su1qdpW+7KPL8ISTvCIkcaFi/JdBknvPg==
+inline-style-prefixer@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/inline-style-prefixer/-/inline-style-prefixer-5.0.4.tgz#828b7e6c6b906233262b593315a8defdf0b21662"
+  integrity sha512-I9wbfqETNhMfULOGf1v2AK3bLr5zlBOftDQ22gUUebkP2gMD0EjogKsaH03J6JXYD9i4uklUpPGjcU0ebvKnig==
   dependencies:
-    bowser "^1.7.3"
     css-in-js-utils "^2.0.0"
 
 inquirer@6.2.1:
@@ -8426,7 +8425,7 @@ qs@6.5.2, qs@~6.5.2:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
   integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
 
-query-string@^6.3.0, query-string@^6.4.2:
+query-string@^6.4.2:
   version "6.4.2"
   resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.4.2.tgz#8be1dbd105306aebf86022144f575a29d516b713"
   integrity sha512-DfJqAen17LfLA3rQ+H5S4uXphrF+ANU1lT2ijds4V/Tj4gZxA3gx5/tg1bz7kYCmwna7LyJNCYqO7jNRzo3aLw==

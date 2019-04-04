@@ -115,6 +115,7 @@ export class ReviewEdit extends React.Component {
             <li>
               <textarea className={classes.textStyle} type="text" placeholder="详细说说你的工作感受" />
             </li>
+            {/*添加图片逻辑*/}
             <div className={classes.imgWrapper}>
               {this.state.urlList.map((url, index) => (
                 <MDBView hover key={url}>
@@ -130,6 +131,7 @@ export class ReviewEdit extends React.Component {
                   </div>
                 </MDBView>
               ))}
+              {/*添加图片内容*/}
               <div className={classes.picContainer}>
                 <img
                   style={{display: 'none'}}
