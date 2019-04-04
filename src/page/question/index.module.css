@@ -1,0 +1,43 @@
+.answerCount {
+  font-family: PingFang SC;
+  font-size: 10px;
+  line-height: normal;
+
+  color: #454F69;
+  margin: 0 0 13px 0;
+}
+.answerWrapper {
+  margin-bottom: 10px;
+}
+.question {
+  background-color: #FFFFFF;
+  margin-bottom: 10px;
+}
+.question2 {
+  background-color: #FFFFFF;
+  margin-bottom: 10px;
+  padding: 10px 0 9px 0;
+}
+.writeAns {
+  position: fixed;
+  width: 89px;
+  height: 40px;
+  bottom:20px;
+  left:139px;
+  background: #415BF0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.writeSpan {
+  margin-left: 10px;
+  font-family: PingFang SC;
+  font-size: 12px;
+  line-height: normal;
+
+  color: #FFFFFF;
+}
+.oneAnswer {
+  
+}

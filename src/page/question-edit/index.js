@@ -7,13 +7,44 @@ import {languageHelper} from '../../tool/language-helper';
 import {removeUrlSlashSuffix} from '../../tool/remove-url-slash-suffix';
 import {setToken} from '../../tool/set-token';
 
+import classes from './index.module.css';
+
 export class QuestionEdit extends React.Component {
   constructor(props) {
     super(props);
     // i18n
     this.text = QuestionEdit.i18n[languageHelper()];
+    this.state={
+      allTags:['公司福利','面试技巧','合理陶瓷']
+    };
+  }
+  
+  deleteIcon(index){
+    let array = this.state.allTags;
+    this.setState({
+      allTags:array.slice(0,index).concat(array.slice(index+1,array.length))
+    });
   }
 
+  newTag(e){
+    const value = e.target.value;
+    let array = this.state.allTags;
+    if(e.keyCode === 13) {
+      if(array.indexOf(value) === 1) {
+        alert('sorry for repeat');
+        e.target.value = null;
+        return;
+      } else if (value === null) {
+        alert('sorry for null');
+      }
+      array.push(value);
+      e.target.value = null;
+      this.setState({
+        allTags:array
+      });
+    }
+  }
+  
   render() {
     // get token from query string in URL
     setToken(this.props.location.search);
@@ -28,15 +59,35 @@ export class QuestionEdit extends React.Component {
     }
     // render
     return (
-      <div>
+      <div style={{backgroundColor:'#F0F3FA',height:'100%'}}>
         <div
-          className="cell-wall"
+          className={`cell-wall ${classes.wrapper}`}
         >
-          <div
-            className="cell-membrane"
-          >
-            <span>question-edit</span>
+          <div className={classes.title}>
+            <span className={classes.cancel}>取消</span>
+            <span className={classes.titleAsk}>提问题</span>
+            <span className={classes.addTitle}>发布</span>
           </div>
+        </div>
+        <div className="cell-wall">
+          <ul className={classes.content}>
+            <li className={classes.titleDes}>问题标题</li>
+            <li>
+              <input className={classes.inputStyle} type="text" placeholder="简述你的问题"/>
+            </li>
+            <li>
+              <textarea className={classes.textStyle} type="text" placeholder="为你的问题添加更详细的描述，让职场达人更好的帮助你哦"/>
+            </li>
+            <div className={classes.tags}>
+              {this.state.allTags.map((item,index)=>(
+                <span key={index} className={classes.tagSpan}>
+                  {item}
+                  <i onClick={() => this.deleteIcon(index)} className={`fa fa-times close ${classes.deleteIcon}`} />
+                </span>
+              ))}
+              <input className={classes.addTag} onKeyDown={(e) => this.newTag(e)} type="text" placeholder='+新标签' />
+            </div>
+          </ul>
         </div>
       </div>
     );

@@ -1,0 +1,122 @@
+.wrapper {
+  box-shadow: 0px 5px 12px rgba(187, 201, 219, 0.2);
+  background-color: #FFFFFF;
+}
+.title {
+  display: flex;
+  width: 90%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.cancel {
+  font-family: PingFang SC;
+  font-size: 14px;
+  line-height: normal;
+  text-align: center;
+
+  color: #454F69;
+  justify-self: flex-start;
+}
+.titleAsk {
+  font-family: PingFang SC;
+  font-size: 16px;
+  line-height: normal;
+  text-align: center;
+  color: #454F69;
+  flex-grow: 1;
+}
+.addTitle {
+  font-family: PingFang SC;
+  font-size: 14px;
+  line-height: normal;
+  text-align: center;
+
+  color: #445DED;
+  justify-self: flex-end;
+}
+.content {
+  width: 90%;
+  padding: 0;
+  margin: 0;
+  padding-top: 30px;
+  list-style: none;
+}
+.titleDes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: PingFang SC;
+  font-size: 14px;
+  line-height: normal;
+  color: #454F69;
+  margin-bottom: 10px;
+}
+.inputStyle {
+  background: #FFFFFF;
+  border: none;
+  border-radius: 2px;
+  padding: 9px 10px;
+  margin-bottom: 49px;
+  width: 100%;
+}
+.inputStyle::placeholder {
+  font-family: PingFang SC;
+  font-size: 14px;
+  line-height: normal;
+
+  color: #B3C1DB;
+}
+.textStyle {
+  background: #FFFFFF;
+  border: none;
+  border-radius: 2px;
+  height: 176px;
+  margin-bottom: 49px;
+  width: 100%;
+  padding: 9px 10px;
+}
+.textStyle::placeholder{
+  font-family: PingFang SC;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: #B3C1DB;
+}
+.tags {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #FFFFFF;
+}
+.tagSpan {
+  background: #F0F3FA;
+  border-radius: 15px;
+  padding: 6px 10px;
+  font-family: PingFang SC;
+  font-size: 14px;
+  line-height: normal;
+  text-align: center;
+  color: #435DEE;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.addTag {
+  border: 1px dashed #5A73FB;
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 5px 9px;
+  font-family: PingFang SC;
+  font-size: 14px;
+  line-height: normal;
+  text-align: center;
+  color: #5A73FB;
+  width: 80px;
+  height: 32px;
+  margin: 0;
+}
+.deleteIcon {
+  font-size: 16px;
+  float: none;
+  margin-left:5px;
+  padding: 0;
+}

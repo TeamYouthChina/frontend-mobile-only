@@ -1,0 +1,16 @@
+.title {
+  font-family: PingFang SC;
+  font-size: 16px;
+  line-height: normal;
+
+  color: #454F69;
+}
+.content {
+  margin-top: 5px;
+  font-family: PingFang SC;
+  font-size: 14px;
+  line-height: normal;
+
+  color: #454F69;
+  margin-bottom: 10px;
+}

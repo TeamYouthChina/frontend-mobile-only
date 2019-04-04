@@ -6,13 +6,35 @@ import {isLogin} from '../../tool/api-helper';
 import {languageHelper} from '../../tool/language-helper';
 import {removeUrlSlashSuffix} from '../../tool/remove-url-slash-suffix';
 import {setToken} from '../../tool/set-token';
+import Player from 'griffith';
+import Title from './title';
+import classes from './index.module.css';
+
+const sources = {
+  hd: {
+    play_url: 'https://zhstatic.zhihu.com/cfe/griffith/zhihu2018_hd.mp4',
+  },
+  sd: {
+    play_url: 'https://zhstatic.zhihu.com/cfe/griffith/zhihu2018_sd.mp4',
+  },
+};
 
 export class Video extends React.Component {
   constructor(props) {
     super(props);
     // i18n
     this.text = Video.i18n[languageHelper()];
+    this.state={
+      videoLists:[1,2,3,4],
+      showIndex:0
+    };
   }
+  
+  handleClick = (index) => {
+    this.setState(()=>({
+      showIndex:index
+    }));
+  };
 
   render() {
     // get token from query string in URL
@@ -28,16 +50,18 @@ export class Video extends React.Component {
     }
     // render
     return (
-      <div>
-        <div
-          className="cell-wall"
-        >
-          <div
-            className="cell-membrane"
-          >
-            <span>video</span>
+      <div className={classes.backFirst}>
+        <br />
+        <p className={classes.title}>
+          <span className={classes.titleSpan}>X</span>
+          <span className={classes.fileDes}>知乎视频</span>
+        </p>
+        {this.state.videoLists.map((item, index)=>(
+          <div onClick={()=>this.handleClick(index)} key={item} className={this.state.showIndex === index ? classes.active : classes.noActive}>
+            <Player id={'1'} cover={''} duration={'1'} sources={sources} />
+            <Title />
           </div>
-        </div>
+        ))}
       </div>
     );
   }

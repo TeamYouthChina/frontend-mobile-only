@@ -7,11 +7,28 @@ import {languageHelper} from '../../tool/language-helper';
 import {removeUrlSlashSuffix} from '../../tool/remove-url-slash-suffix';
 import {setToken} from '../../tool/set-token';
 
+import Title from './containers/title';
+import Content from './containers/content';
+import Footer from './containers/footer';
+import Comments from './components/comments';
+import {QuestionCard} from '../../general-component/question-card';
+import data from './data';
+import classes from './index.module.css';
+
 export class Article extends React.Component {
   constructor(props) {
     super(props);
     // i18n
     this.text = Article.i18n[languageHelper()];
+    this.state={
+      backend:null
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      backend:data.content
+    });
   }
 
   render() {
@@ -27,17 +44,53 @@ export class Article extends React.Component {
       return (<Redirect to={pathname} />);
     }
     // render
-    return (
-      <div>
+    return (this.state.backend !== null) ? (
+      <div style={{backgroundColor: '#F0F3FA'}}>
+        <div
+          className="cell-wall"
+          style={{backgroundColor: '#FFFFFF'}}
+        >
+          <div
+            className="cell-membrane"
+          >
+            <span>article</span>
+            <Title 
+              username={this.state.backend.username} 
+            />
+            <Content 
+              content={this.state.backend.content} 
+              title={this.state.backend.title} 
+            />
+            <Footer 
+              tags={this.state.backend.tags} 
+            />
+            <Comments />
+          </div>
+        </div>
         <div
           className="cell-wall"
         >
           <div
             className="cell-membrane"
           >
-            <span>article</span>
+            <p className={classes.recommand}>推荐阅读</p>
           </div>
         </div>
+        
+        <div
+          className="cell-wall"
+          style={{backgroundColor: '#FFFFFF'}}
+        >
+          <div
+            className="cell-membrane"
+          >
+            <QuestionCard />
+          </div>
+        </div>
+      </div>
+    ) : (
+      <div>
+        loading
       </div>
     );
   }

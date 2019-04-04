@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  margin-bottom: 31px;
+  align-items: center;
+}
+.avatar {
+  width: 28px;
+  height:28px;
+  background: #F4F4F4;
+  margin-right: 10px;
+}
+.addComment {
+  border: 1px solid #F0F3FA;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 4px 10px 6px 10px;
+  height:27px;
+}
+.addComment::placeholder {
+  font-family: PingFang SC;
+  font-size: 12px;
+  line-height: normal;
+  height:17px;
+  color: #8D9AAF;
+
+}

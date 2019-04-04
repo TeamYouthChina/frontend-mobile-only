@@ -1,0 +1,51 @@
+.footerWrapper {
+  position: fixed;
+  bottom:0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0 -5px 12px rgba(187, 201, 219, 0.2);
+  padding: 10px 0px;
+}
+.wrapper2 {
+  flex-basis: 90vw;
+  display: flex;
+  justify-content: space-between;
+}
+.useful {
+  background: #F0F3FA;
+  border-radius: 20px;
+  padding: 11px 12px;
+}
+.useful-icon {
+  color: #415BF0;
+}
+.useful-span {
+  font-family: PingFang SC;
+  font-size: 12px;
+  line-height: normal;
+  color: #415BF0;
+  margin-left: 5px;
+}
+.leftThing {
+  display: flex;
+}
+.like {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+.like-icon {
+  width: 20px;
+  height: 20px;
+}
+.like-span {
+  margin-top: 5px;
+  font-family: PingFang SC;
+  font-size: 12px;
+  line-height: normal;
+  text-align: center;
+
+  color: #BBC9DB;
+}
